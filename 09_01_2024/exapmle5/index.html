@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>React Day 2</title>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>  
+</head>
+
+<body>
+    <div id="root"></div>
+</body>
+
+</html>
+
+<script>
+    const Navbar = () => {
+            return (
+                <div id="navbr">Header</div>
+            );
+        };
+
+        const Sidebar = () => {
+            return <p>Sidebar</p>;
+        };
+
+        const Main = () => {
+            return <h3>Main</h3>;
+        };
+
+        const Middle = () => {
+            return (
+                <div>
+                    <Sidebar />
+                    <Main />
+                </div>
+            );
+        };
+
+        const Footer = () => {
+            return <div>Footer</div>;
+        };
+
+        const App = () => {
+            return (
+                <div>
+                    <Navbar />
+                    <Middle />
+                    <Footer />
+                </div>
+            );
+        };
+
+        const rootElement = document.getElementById("root");
+        const reactRoot = ReactDOM.createRoot(rootElement);
+        reactRoot.render(<App />);
+</script>

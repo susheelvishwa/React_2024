@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>React Day 2</title>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <style>
+        #maindiv {
+            display: flex;
+            border: 2px solid black;
+            padding: 10px;
+            justify-content: center;
+            align-items: center;
+            height: 300px;
+            background-color: rgb(255, 228, 196);
+        }
+
+        .child3 {
+            background-color: blue;
+            height: 20px;
+            width: 90px;
+            border-radius: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="root"></div>
+</body>
+
+</html>
+
+<script>
+    let main = (
+                <div id="container" className="main">
+                    <h3 className="child1">Learning React</h3>
+                    <p className="child2">Day 2</p>
+                    <button className="child3">Click Me !</button>
+                </div>
+            );
+        const reactRoot = ReactDOM.createRoot(root);
+        reactRoot.render(main);
+</script>
