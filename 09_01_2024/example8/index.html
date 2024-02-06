@@ -14,8 +14,15 @@
 <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
 <script src="https://unpkg.com/@babel/standalone@7.8.3/babel.js"></script>
 <script type="text/babel">
-    const root = ReactDOM.createRoot(document.getElementById("root"));
-    root.render(<p className="quote">How do we write code in React</p>);
+    const element = (
+            <div>
+                <span>Carpe</span>
+                <span>Diem</span>
+            </div>
+        )
+
+        const reactRoot = ReactDOM.createRoot(document.getElementById("root"))
+        reactRoot.render(element)
 </script>
 
 </html>

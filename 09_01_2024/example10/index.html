@@ -4,18 +4,29 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Create UI With React API</title>
+    <title>Show your name in wins=dow screen</title>
 </head>
 
 <body>
     <div id="root"></div>
 </body>
+
 <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
 <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
 <script src="https://unpkg.com/@babel/standalone@7.8.3/babel.js"></script>
 <script type="text/babel">
-    const root = ReactDOM.createRoot(document.getElementById("root"));
-    root.render(<p className="quote">How do we write code in React</p>);
+    // Code goes here
+    const element =(
+        <>
+            <div>
+                <h1>Suheel Vishwakarma</h1>
+            </div>
+        </>
+    );
+
+    const reactRoot = ReactDOM.createRoot(document.getElementById("root"))
+    reactRoot.render(element)
+
 </script>
 
 </html>

@@ -12,10 +12,16 @@
 </body>
 <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
 <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
-<script src="https://unpkg.com/@babel/standalone@7.8.3/babel.js"></script>
-<script type="text/babel">
-    const root = ReactDOM.createRoot(document.getElementById("root"));
-    root.render(<p className="quote">How do we write code in React</p>);
+<script>
+    // Your task is to create a p element with text "Seize the day" and display it to DOM using React and ReactDOM
+    // React element created
+    const element = React.createElement("p", {
+        children: "Seize the day",
+    });
+
+    // React element rendered;
+    const reactRoot = ReactDOM.createRoot(document.getElementById("root"));
+    reactRoot.render(element);
 </script>
 
 </html>

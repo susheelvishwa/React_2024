@@ -4,58 +4,26 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <title>React Day 2</title>
-    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
-    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
-    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
-    <style>
-        #maindiv {
-            display: flex;
-            border: 2px solid black;
-            padding: 10px;
-            justify-content: center;
-            align-items: center;
-            height: 300px;
-            background-color: rgb(255, 228, 196);
-        }
-
-        .child3 {
-            background-color: blue;
-            height: 20px;
-            width: 90px;
-            border-radius: 20px;
-        }
-    </style>
+    <title>Create UI with React API</title>
 </head>
 
 <body>
     <div id="root"></div>
+    <!-- 1. Add React and ReactDOM Packages -->
+    <script src="https://www.unpkg.com/react@18.2.0/umd/react.production.min.js"></script>
+    <script src="https://www.unpkg.com/react-dom@18.2.0/umd/react-dom.production.min.js"></script>
+    <script>
+        // 2. Create a react element using React.createElement method.
+        const element = React.createElement("p", {
+            className: "quote",
+            children: "React and ReactDOM",
+        });
+
+        // 3. Define a location in your HTML (like a div with an ID of "root") where your React application will be attached. ( It's like you inform react that I want the entire react app to be within this div#root here )
+        const reactRoot = ReactDOM.createRoot(document.getElementById("root"));
+        // 4. render method basically takes react element. Convert react element to actual DOM and attach it to root element in HTML
+        reactRoot.render(element);
+    </script>
 </body>
 
 </html>
-
-<script>
-    let Greeting = function({ personName }){
-            (
-                <div>
-                    <h1>Hello</h1>
-                    <p>Welcome, {Name}</p>
-                </div>
-            );
-        };
-
-        let rootElement = document.getElementById("root");
-        let main = function() {
-            (
-                <div>
-                    <Greeting Name="susheel" />
-                    <Greeting Name="anklesh" />
-                    <Greeting Name="mansi" />
-                </div>
-            );
-        };
-
-        const reactRoot = ReactDOM.createRoot(rootElement);
-        reactRoot.render(main);
-</script>
