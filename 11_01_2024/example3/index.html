@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>React Day 3</title>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+
+<body>
+    <div id="root"></div>
+</body>
+
+</html>
+<script type="text/babel">
+    function Greet({ text, name }) { // First Change
+            return (
+                <p>
+                    {text}, {name}
+                </p>
+            );
+        }
+
+        const element = (
+            <div className="container">
+                <Greet text="Happy Birthday" name="Bruce" /> // Second Change; Props are discussed in detail below
+                <Greet text="Good Morning" name="Rachel" />
+            </div>
+        );
+        const reactRoot = ReactDOM.createRoot(document.getElementById("root"));
+
+        reactRoot.render(element);
+</script>

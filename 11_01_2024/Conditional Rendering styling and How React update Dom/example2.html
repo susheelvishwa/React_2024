@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Clock</title>
+</head>
+
+<body>
+
+    <h1>Javascript and DOM</h1>
+    <li> The entire Dom tree is destroyed</li>
+    <li>A new one gets created</li>
+    <br>
+    <br>
+    <div id="root"></div>
+    <script>
+        let root = document.getElementById("root")
+        function tick() {
+            const time = new Date().toLocaleTimeString()
+            root.innerHTML = `
+            <h1> Digital Clock </h1>
+            <h3>${time}</h3>
+            `
+        }
+        setInterval(tick, 1000)
+    </script>
+
+</body>
+
+</html>
