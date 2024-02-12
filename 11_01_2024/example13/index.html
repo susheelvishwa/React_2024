@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>State Management and useState</title>
+</head>
+
+<body>
+    <div id="root"></div>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script src="https://www.unpkg.com/react@18.2.0/umd/react.production.min.js"></script>
+    <script src="https://www.unpkg.com/react-dom@18.2.0/umd/react-dom.production.min.js"></script>
+    <script type="text/babel">
+        function App() {
+            const [count, setCount] = React.useState(0);
+            const [count1, setCount1] = React.useState(0);
+            const [count2, setCount2] = React.useState(0);
+
+            const handleClick = () => {
+                setCount(count + 4);
+            };
+            const handleClic = () => {
+                setCount(count + 3);
+            };
+            const handleCli = () => {
+                setCount(count + 2);
+            };
+            const handleCl = () => {
+                setCount(count +1);
+            }; 
+
+            return (
+                <div>
+                    <p style={{ color: "red" }}>Button is clicked {count} times</p>
+                    <p style={{ color: "red" }}>weket {count} times</p>
+
+                    <p>Weket: {handleCl}</p>
+                    <button style={{ color: "green" }} onClick={handleClick}>incriment by +4</button>
+                    <button style={{ color: "blue" }} onClick={handleClic}>incriment by +8</button>
+                    <button style={{ color: "red" }} onClick={handleCli}>incriment by +3</button>
+                    <button onClick={handleCl}>decriment</button>
+                </div>
+            );
+        }
+
+        const reactRoot = ReactDOM.createRoot(document.getElementById("root"));
+        reactRoot.render(<App />);
+    </script>
+</body>
+
+</html>

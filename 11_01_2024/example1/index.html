@@ -21,7 +21,6 @@
     function App() {
         const [runs, setRuns] = React.useState(0);
         const [wickets, setWickets] = React.useState(0);
-        const [clrscr,clr] = React.useState(0);
 
         const RunsIncrease = (incre) => {
             setRuns(runs + incre);
@@ -37,12 +36,10 @@
                 <h2>Task number two</h2>
                 <p>Runs: {runs}</p>
                 <p>Wickets: {wickets}</p>
-                <p>clrscr:{clrscr}</p>
-                <button onClick={() => RunsIncrease(4)}> (+5 Runs)</button>
+                <button onClick={() => RunsIncrease(4)}> (+4 Runs)</button>
                 <button onClick={() => RunsIncrease(8)}> (+8 Runs)</button> 
                 <button onClick={() => RunsIncrease(3)}> (+3 Runs)</button> 
                 <button onClick={Wicket}>Wicket</button>
-                <button onClick={clrscr}>clrscr</button>
                 
             </div>
         );

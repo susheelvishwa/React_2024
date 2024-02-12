@@ -17,21 +17,19 @@
 
 </html>
 <script type="text/babel">
-    function Greet({ text, name }) { // First Change
+        function Greet({ text, name }) { // First Change
             return (
                 <p>
                     {text}, {name}
                 </p>
             );
-        }
-
+            }
         const element = (
             <div className="container">
-                <Greet text="Happy Birthday" name="Bruce" /> // Second Change; Props are discussed in detail below
+                <Greet text="Happy Birthday" name="Bruce" /> Second Change; Props are discussed in detail below
                 <Greet text="Good Morning" name="Rachel" />
             </div>
         );
         const reactRoot = ReactDOM.createRoot(document.getElementById("root"));
-
         reactRoot.render(element);
 </script>
