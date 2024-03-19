@@ -21,10 +21,10 @@ const App = () => {
       console.log(error);
     }
   }
+    console.log(data);
 
-  console.log(data);
-
-  clickme();
+//   clickme();
+  // this is a wrong in react
 
   return (
     <>
