@@ -10,11 +10,28 @@
 <body>
     <div id="root"></div>
 </body>
-<script src="<https://www.unpkg.com/react@18.2.0/umd/react.development.js>"></script>
-<script src="<https://www.unpkg.com/react-dom@18.2.0/umd/react-dom.development.js>"></script>
-<script src="<https://unpkg.com/@babel/standalone/babel.min.js>"></script>
+
+<script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+<script src="https://unpkg.com/@babel/standalone@7.8.3/babel.js"></script>
 <script type="text/babel">
-    // Code goes here
+
+    function handlclick(){
+        alert("Hello")
+    }
+
+    const element = (
+        <>
+            <p>React is a javascript library</p>
+            <div>
+                <p >Click the below button to alert 'Hello</p>
+                <button onClick={handlclick}>Alert Hello</button>
+            </div>
+        </>
+    );
+
+    const reactRoot = ReactDOM.createRoot(document.getElementById("root"));
+    reactRoot.render(element);
 </script>
 
 </html>
