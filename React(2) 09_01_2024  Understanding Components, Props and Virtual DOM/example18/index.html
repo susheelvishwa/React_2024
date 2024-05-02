@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>3</title>
+</head>
+
+<body>
+    <div id="root">
+        <!-- React Application lives here -->
+    </div>
+</body>
+<!-- REACT Library -->
+<script src="https://unpkg.com/react@18.2.0/umd/react.production.min.js"></script>
+<!-- REACT DOM Library -->
+<script src="https://unpkg.com/react-dom@18.2.0/umd/react-dom.production.min.js"></script>
+
+<!-- Babel Library -->
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+<script type="text/babel">
+    let rootElement = document.getElementById("root");
+
+
+
+    function Message(props) {
+        const styleObject = { color: props.colorOfText };
+
+        return <h4 style={styleObject}>{props.text}</h4>;
+    }
+
+    function Footer() {
+        return (
+            <div
+                style={{
+                    width: "100%",
+                    backgroundColor: "black",
+                    color: "white",
+                    padding: "20px",
+                }}
+            >
+                Footer
+            </div>
+        );
+    }
+
+    function Navbar() {
+        return (
+            <div
+                style={{
+                    width: "100%",
+                    backgroundColor: "lightblue",
+                    color: "blue",
+                    padding: "20px",
+                }}
+            >
+                Navbar
+            </div>
+        );
+    }
+    // let element = (
+    //     <>
+    //         <Navbar />
+    //         <Message text="Good Morning" colorOfText="blue" />
+    //         <Message text="Good Afternoon" colorOfText="green" />
+    //         <Message text="Good Afternoon" colorOfText="red" />
+    //         <Footer />
+    //     </>
+    // );
+
+
+    function App(){
+        return (
+            <>
+                <Navbar />
+                <Message text="Good Morning" colorOfText="blue" />
+                <Message text="Good Afternoon" colorOfText="green" />
+                <Message text="Good Afternoon" colorOfText="red" />
+                <Footer />
+            </>
+        )
+    }
+
+    ReactDOM.createRoot(rootElement).render(<App/>);
+</script>
+
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create UI with DOM & JS</title>
+</head>
+
+<body>
+    <div id="root"></div>
+    <script type="text/javascript">
+        // 1. Create a DOM element using document.createElement method
+        const element = document.createElement("p");
+        element.textContent = "JS and DOM : ";
+        element.className = "quote";
+
+        // 2. Catch hold of the root element directly in the DOM tree and append it to that;
+        const rootElement = document.getElementById("root");
+        rootElement.appendChild(element);
+    </script>
+</body>
+
+</html>

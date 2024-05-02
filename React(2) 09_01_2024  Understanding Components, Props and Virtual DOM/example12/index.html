@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Boilerplate Code</title>
+</head>
+
+<body>
+    <div id="root"></div>
+</body>
+
+<script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+<script src="https://unpkg.com/@babel/standalone@7.8.3/babel.js"></script>
+<script type="text/babel">
+    // Code goes here
+    function hello() {
+        console.log("hello World")
+    }
+
+    const element = (
+        <>
+            <div class="header"></div>
+            <div id="middle">
+                <p class="sidebar" style={{
+                    color: "red",
+                }} >Create a react element ( use React Fragment as a wrapper) which should have following children;</p>
+                <p class="main"></p>
+                <button id="btn" onClick={hello}>click me !</button>
+            </div>
+        </>
+    );
+
+    const reactRoot = ReactDOM.createRoot(document.getElementById("root"));
+    reactRoot.render(element);
+
+</script>
+
+</html>

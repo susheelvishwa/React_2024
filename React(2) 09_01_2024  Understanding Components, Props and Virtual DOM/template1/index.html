@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>3</title>
+</head>
+
+<body>
+    <div id="root">
+        <!-- React Application lives here -->
+    </div>
+</body>
+<!-- REACT Library -->
+<script src="https://unpkg.com/react@18.2.0/umd/react.production.min.js"></script>
+<!-- REACT DOM Library -->
+<script src="https://unpkg.com/react-dom@18.2.0/umd/react-dom.production.min.js"></script>
+
+<!-- Babel Library -->
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+<script type="text/babel">
+    function App() {
+        return <>App</>;
+    }
+
+    let rootElement = document.getElementById("root");
+    ReactDOM.createRoot(rootElement).render(<App />);
+</script>
+
+</html>
