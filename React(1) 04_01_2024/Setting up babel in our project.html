@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>react-5 | example-1</title>
+</head>
+
+<body>
+    <div id="root"></div>
+    <script src="https://unpkg.com/react@18.2.0/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@18.2.0/umd/react-dom.production.min.js"></script>
+    <!-- Step 1: Add Babel package -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <!-- Step 2 : Add the script type as text/babel -->
+    <script type="text/babel">
+        // Step 3 : Create a react element; but this time using JSX and not React.createElement() method
+        const element = <div>Carpe Diem</div>;
+        // Step 4: Using Render method; display the same element created to DOM
+        const reactRoot = ReactDOM.createRoot(document.getElementById("root"));
+        reactRoot.render(element);
+    </script>
+</body>
+
+</html>

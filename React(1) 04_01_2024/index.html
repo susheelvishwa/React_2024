@@ -14,14 +14,14 @@
 <script src="https://www.unpkg.com/react-dom@18.2.0/umd/react-dom.development.js"></script>
 <script>
     // My Code goes here;
-    const element = React.createElement("Div",{
+    const element = React.createElement("div",{
         className: "container",
         id : "someId",
         children: "Carpe Diem"
     });
     console.log(element);
 
-    const reactRoot = ReactDom.creatRoot(document.createElementbyID("root"));
+    const reactRoot = ReactDom.creatRoot(document.getElementById("root"));
     reactRoot.render(element);
 </script>
 
