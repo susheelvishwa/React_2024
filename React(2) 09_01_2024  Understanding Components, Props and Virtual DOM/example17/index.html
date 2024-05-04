@@ -5,33 +5,35 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Boilerplate Code</title>
+    <!-- Include React and Babel -->
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone@7.8.3/babel.js"></script>
 </head>
 
 <body>
     <div id="root"></div>
+
+    <!-- Your script will go here -->
+    <script type="text/babel">
+        // Define a simple function to render a message
+        function message(props) {
+            return <div>{props.text}</div>;
+        }
+
+        // Create an element using React fragments and rendering messages
+        const element = (
+            <>
+                {message({ text: "susheel" })}
+                {message({ text: "shivam" })}
+                {message({ text: "pilllu" })}
+            </>
+        );
+
+        // Render the element to the root
+        const reactRoot = ReactDOM.createRoot(document.getElementById("root"));
+        reactRoot.render(element);
+    </script>
 </body>
-
-<script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
-<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
-<script src="https://unpkg.com/@babel/standalone@7.8.3/babel.js"></script>
-<script type="text/babel">
-    // Code goes here
-    function message(props){
-        const styleobject = {color:props.colorOfText}
-        return <h4 style={styleobject}> {propes.text} {propes.colorOfText} </h4>;
-
-    }
-        
-    const element = (
-        <>
-            {message({ text: "susheel", colorOfText: "red" })}
-            {message({ text: "shivam" })}
-            {message({ text: "pilllu" })}
-        </>
-    );
-
-    const reactRoot = ReactDOM.createRoot(document.getElementById("root"));
-    reactRoot.render(element);
-</script>
 
 </html>

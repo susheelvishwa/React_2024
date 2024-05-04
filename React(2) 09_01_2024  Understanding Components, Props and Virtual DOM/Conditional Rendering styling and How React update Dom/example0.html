@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Conditional rendering</title>
+    <style>
+        .main {
+            margin: 10px;
+        }
+
+        .heading {
+            border: 1px solid black;
+            margin: 20px;
+            padding: 20px;
+        }
+
+        .hello {
+            padding: 5px;
+        }
+
+        .btn {
+            background-color: green;
+            border-radius: 10px;
+        }
+
+        .btn:hover {
+            background-color: red;
+        }
+    </style>
+</head>
+
+
+<body>
+    <div id="root"></div>
+</body>
+
+<script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+<script src="https://unpkg.com/@babel/standalone@7.8.3/babel.js"></script>
+<script type="text/babel">
+    // Code goes here
+    function App() {
+        return <>
+
+            <div class="hello">
+                <div class="heading">
+                    <p>Name : Pillu</p>
+                    <p>Enrollment No : 0133EC201119</p>
+                    <p>college : SIRT</p>
+                    <div class="main">
+                        <button class="btn">click me !</button>
+                    </div>
+                </div>
+                <div class="heading">
+                    <p>Name : Susheel Vishwakarma</p>
+                    <p>Enrollment No : 0133EC201113</p>
+                    <p>college : SIRT</p>
+                    <div class="main">
+                        <button class="btn">click me !</button>
+                    </div>
+                </div>
+                <div class="heading">
+                    <p>Name : Shivam Singh</p>
+                    <p>Enrollment No : 0133EC201101</p>
+                    <p>college : SIRT</p>
+                    <div class="main">
+                        <button class="btn">click me !</button>
+                    </div>
+                </div>
+                <div class="heading">
+                    <p>Name : jankit lodhi</p>
+                    <p>Enrollment No : 0133EC201013</p>
+                    <p>college : SIRT</p>
+                    <div class="main">
+                        <button class="btn">click me !</button>
+                    </div>
+                </div>
+            </div>
+        </>
+    }
+
+    const reactRoot = ReactDOM.createRoot(document.getElementById("root"));
+    reactRoot.render(<App />)
+
+</script>
+
+</html>
