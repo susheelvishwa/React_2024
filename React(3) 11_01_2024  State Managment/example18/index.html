@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>example-18</title>
+</head>
+
+<body>
+    <div id="root"></div>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script src="https://www.unpkg.com/react@18.2.0/umd/react.production.min.js"></script>
+    <script src="https://www.unpkg.com/react-dom@18.2.0/umd/react-dom.production.min.js"></script>
+    <script type="text/babel">
+        function Child(props) {
+            return (
+                <>
+                    <h1>{props.count}</h1>
+                    <button onClick={() => props.incrementByValue(1)}>INC BY 1</button>
+                    <button onClick={() => props.incrementByValue(5)}>INC BY 5</button>
+                    <button onClick={() => props.incrementByValue(8)}>INC BY 8</button>
+                    <button onClick={() => props.incrementByValue(10)}>INC BY 10</button>
+                </>
+            );
+        }
+
+        function Parent() {
+            const [count, setCount] = React.useState(0);
+
+            const incrementByValue = (val) => {
+                setCount(count + val);
+            };
+
+            return (
+                <div>
+                    <Child count={count} incrementByValue={incrementByValue} />
+                </div>
+            );
+        }
+
+        const reactRoot = ReactDOM.createRoot(document.getElementById("root"));
+        reactRoot.render(<Parent />);
+    </script>
+</body>
+
+</html>

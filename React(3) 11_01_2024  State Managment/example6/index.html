@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>example-6</title>
+</head>
+
+<body>
+    <div id="root"></div>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script src="https://www.unpkg.com/react@18.2.0/umd/react.production.min.js"></script>
+    <script src="https://www.unpkg.com/react-dom@18.2.0/umd/react-dom.production.min.js"></script>
+    <script type="text/babel">
+        function App() {
+            const [count1, setCount1] = React.useState(0);
+            const [count2, setCount2] = React.useState(0);
+
+            const incrementCount1 = () => {
+                setCount1(count1 + 1);
+            };
+
+            const incrementCount2 = () => {
+                setCount2(count2 + 1);
+            };
+
+            return (
+                <div>
+                    <p>Button 1 is clicked {count1} times</p>
+                    <button onClick={incrementCount1}>Button 1</button>
+                    <p>Button 2 is clicked {count2} times</p>
+                    <button onClick={incrementCount2}>Button 2</button>
+                </div>
+            );
+        }
+
+        const reactRoot = ReactDOM.createRoot(document.getElementById("root"));
+        reactRoot.render(<App />);
+    </script>
+</body>
+
+</html>
