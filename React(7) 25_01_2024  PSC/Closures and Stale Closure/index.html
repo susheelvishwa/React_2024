@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Closure</title>
+    <style>
+        body{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <p>
+        <h2>Closures</h2>
+        
+        Imagine you have a function, let's call it `outerFunction`. Inside this `outerFunction`, you define another function,
+        called `innerFunction`. Now, `innerFunction` can access variables from `outerFunction`. That's the basic idea of a
+        closure.
+        
+        Here's some code to illustrate:
+    </p>
+    <p>In this above example, `innerFunction` is a closure because
+    
+    - it "closes over" the `outerVariable`.
+    - Even after `outerFunction` has finished running, `innerFunction` still has access to `outerVariable`. That's why when
+    we call `myClosure()`, it outputs `"I'm outside!"`</p>
+</body>
+<script>
+    function outerFunction() {
+        let outerVariable = "I'm outside!";
+
+        function innerFunction() {
+            console.log(outerVariable); // innerFunction can access outerVariable
+        }
+
+        return innerFunction;
+    }
+
+    const myClosure = outerFunction();
+    myClosure(); // Outputs: "I'm outside!"
+</script>
+
+</html>

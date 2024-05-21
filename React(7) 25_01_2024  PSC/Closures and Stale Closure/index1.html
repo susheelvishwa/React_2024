@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stale Closure</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <h3>Stale Closure</h3>
+    <p>A stale closure occurs when an inner function captures a variable from an outer function, and that variable
+        changes
+        after the inner function is defined. Because closures capture variables by reference, not by value, the inner
+        function
+        might not behave as you'd expect.</p>
+    <br>
+    <p>
+        <b>In a nutshell :</b>
+
+        Stale Closure is a situation where you might expect a closure to capture a fresh variable, but it ends up using
+        an
+        "outdated" or "stale" one instead. This can lead to some unexpected behavior.
+    </p>
+</body>
+<script>
+    /* Stale Closure */
+    function counter(initValue) {
+        let count = initValue
+        function increment() {
+            count += 1
+            console.log(count)
+        }
+
+        let message = `Count is ${count}`
+        function getCount() {
+            return message
+        }
+
+        return [increment, getCount]
+    }
+    const [increment, getCount] = counter(0)
+    increment() // 1
+    increment() // 2
+    increment() // 3
+    // Does not work!
+    console.log(getCount()) // Current value is 0
+</script>
+
+</html>
