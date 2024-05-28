@@ -53,13 +53,13 @@ const ButtonWithUseRef = () => {
 export default function App() {
   return (
     <>
-      {/* <ButtonWithUseState/> */}
-      {/* <ButtonWithUseRef /> */}
-      {/* <Example/> */}
-      {/* <Example2/> */}
-      {/* <Example3/> */}
+      <ButtonWithUseState/>
+      <ButtonWithUseRef />
+      <Example/>
+      <Example2/>
+      <Example3/>
       <Example4/>
-      {/* <Example5/> */}
+      <Example5/>
     </>
   )
 }
