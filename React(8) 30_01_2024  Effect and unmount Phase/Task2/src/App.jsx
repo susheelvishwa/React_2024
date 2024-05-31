@@ -1,61 +1,69 @@
-import  { useEffect, useState } from "react"
+import  { useEffect, useState } from "react";
 import ErrorIndicator from "./components/ErrorIndicator";
 import LoadingIndicator from "./components/LoadingIndicator";
+import "./App.css"; 
 
 const App = () => {
-
   const [loading, setLoading] = useState(false);
   const [err, setErr] = useState(false);
-  const [products, setProducts] = useState();
+  const [products, setProducts] = useState([]);
 
   async function fetchAndUpdateData() {
-    setLoading(true)
+    setLoading(true);
     try {
       let res = await fetch(`https://dummyjson.com/products`);
       let finalResponse = await res.json();
-      // console.log(finalResponse.products);
-      setProducts(finalResponse?.products);
-      setLoading(false)
+      setProducts(finalResponse?.products ?? []);
+      setLoading(false);
     } catch (error) {
-      setErr(true)
-      setLoading(false)
+      setErr(true);
+      setLoading(false);
     }
   }
 
-  console.log("before useEffect");
-  useEffect(function () {
-    console.log("inside useEffect");
-    // during mount phase this thing will do
-    //side effects can be performed here;
-    //this will be called after rendering is completed;
-    //thereby it does not block the rendering process
-    fetchAndUpdateData()
-  }, [])
-  console.log("after useEffect");
+  useEffect(() => {
+    fetchAndUpdateData();
+  }, []);
 
   if (err) {
-    return <ErrorIndicator/>
+    return <ErrorIndicator />;
   }
 
   if (loading) {
     return <LoadingIndicator />;
   }
 
-  // fetchAndUpdateData()  we can also perform initial rendering but this
-  // thing block the rendering process
-
   return (
     <>
-      {/* <button onClick={fetchAndUpdateData}>get all data</button> */}
-      {
-        // when we perform side effect 
-        // when we need to perform mount phase only --> lifecycle
-        // if normal operation like click event, onchange, onclick so on this time we perform side effect directly
-        // but when we communicate with external world so un this time we perform side effect 
-      }
-      <div className="product-container"> {JSON.stringify(products)} </div>
+      <div className="product-container">
+        {products.length > 0 ? (
+          products.map((product) => (
+            <div key={product.id} className="product">
+              <h2>ID number : {product.id}</h2>
+              <h2>{product.title}</h2>
+              <img src={product.thumbnail} alt={product.title} />
+              <p>{product.description}</p>
+              <p>Price: ${product.price}</p>
+              <p>Rating: {product.rating}</p>
+              <p>Stock: {product.stock}</p>
+              <p>Category: {product.category}</p>
+              <h3>Reviews:</h3>
+              <ul>
+                {product.reviews.map((review, index) => (
+                  <li key={index}>
+                    <strong>{review.reviewerName}:</strong> {review.comment}{" "}
+                    (Rating: {review.rating})
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))
+        ) : (
+          <p>No products available</p>
+        )}
+      </div>
     </>
-  )
-}
+  );
+};
 
-export default App
+export default App;
