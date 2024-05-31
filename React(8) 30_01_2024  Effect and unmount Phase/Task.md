@@ -5,11 +5,23 @@ https://dummyjson.com/products ,
 and 
 - display those same product image ( first image available on images array ), title, description, price
 
-# Task 2 ( 5 Mins )
+# Task 2: 
+  using axios by clicking button get the data
+
+# Task 3: 
+  using axios when implement mount phase
+
+# Task 4 ( 5 Mins )
 • Now make an API request, get the data and display data during mount phase
 • Handle Error and Loading states as well
 
-# Task 3:
+# Task 5:
+  - Fetching data from an API using axios.
+  - Managing loading and error states.
+  - Sorting the products based on various criteria.
+  - Conditionally rendering components based on the current state.
+ 
+# Task 6:
 
     - Your task is to create a component called StopWatch which will  just display text "StopWatch".
     - Import this component to App component
@@ -19,7 +31,7 @@ and
         - A button which will toggle the state value show
 
 
-# Task 4 :
+# Task 7 :
 
     StopWatch component should contain an actual stop watch which starts from 0
     
@@ -35,7 +47,7 @@ and
 
   # clean up function
 
-# Task 5: 
+# Task 8 : 
 Let’s build a fake chat application. Here we are simulating fake chat application.
 
 # Cleanup functions during update phase
