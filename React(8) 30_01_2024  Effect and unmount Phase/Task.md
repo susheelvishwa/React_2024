@@ -10,6 +10,7 @@ and
 
 # Task 3: 
   using axios when implement mount phase
+  sideEffect during update Phase
 
 # Task 4 ( 5 Mins )
 • Now make an API request, get the data and display data during mount phase

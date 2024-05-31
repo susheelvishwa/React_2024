@@ -1,6 +1,7 @@
 const ProductItem = ({ id, title, price, description, category, image }) => {
   return (
     <div className="Container" key={id}>
+      <h3>ID number : { id}</h3>
       <h2>{title}</h2>
       <p>{description}</p>
       <p>{price}</p>

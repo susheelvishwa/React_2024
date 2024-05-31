@@ -8,14 +8,15 @@ const Products = () => {
   const [loading, setLoading] = useState(false);
   const [products, setProducts] = useState([]);
   const [error, setError] = useState(false);
+  const [sortValue, setSortValue] = useState("asc")
 
-  async function fetchAndUpdateData() {
+  async function fetchAndUpdateData(sortValue) {
     setLoading(true);
-    setError(false); 
+    setError(false);
     try {
       let res = await axios({
         method: "get",
-        url: "https://fakestoreapi.com/products",
+        url: `https://fakestoreapi.com/products?sort=${sortValue}`,
       });
 
       let productData = res?.data;
@@ -30,8 +31,8 @@ const Products = () => {
   }
 
   useEffect(() => {
-    fetchAndUpdateData()
-  }, [])
+    fetchAndUpdateData(sortValue);
+  }, [sortValue]);
 
   if (loading) {
     return <Loading />;
@@ -41,9 +42,18 @@ const Products = () => {
     return <Error />;
   }
 
+  console.log(sortValue);
+
   return (
     <>
       <h1>Product List</h1>
+
+      <select value={sortValue} onChange={(e) => {
+        setSortValue(e.target.value)
+      }}>
+        <option value="asc">Asc</option>
+        <option value="desc">Desc</option>
+      </select>
       {products.map((product) => (
         <ProductItem {...product} key={product?.id} />
       ))}
