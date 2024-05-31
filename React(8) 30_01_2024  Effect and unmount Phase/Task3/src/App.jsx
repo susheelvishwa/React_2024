@@ -1,21 +1,23 @@
-import { useState } from 'react'
-import StopWatch from './components/StopWatch'
+// App.js
+import  { useState } from "react";
+import StopWatch from "./components/StopWatch";
+import "./App.css";
 
 const App = () => {
+  const [show, setShow] = useState(true);
 
-  const[show, setShow] = useState(true)
-
-  function handleShow() {
-    setShow(!show)
-  }
+  const handleShow = () => {
+    setShow(!show);
+  };
 
   return (
-    <div>
-      {/* {show && <StopWatch />} */}
-      {show ? <StopWatch /> : null}
-      <button onClick={handleShow}>TOGGLE BTN</button>
+    <div className="container">
+      {show && <StopWatch />}
+      <button className="button" onClick={handleShow}>
+        TOGGLE WATCH
+      </button>
     </div>
-  )
-}
+  );
+};
 
-export default App
+export default App;
