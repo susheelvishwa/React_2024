@@ -1,0 +1,13 @@
+.Box{
+    border: 1px solid black;
+    padding: 5px ;
+    margin: 30px;
+}
+
+.complete{
+    color: green;
+}
+
+.incomplete{
+    color: red;
+}

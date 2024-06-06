@@ -18,7 +18,7 @@ const App = () => {
   useEffect(function () {
     // console.log("second");
     clickme();
-  })
+  });
 
   async function clickme() {
     try {
@@ -36,17 +36,16 @@ const App = () => {
 
   // console.log("third");
 
-    // console.log(data);
+  // console.log(data);
 
   // clickme();
-  // this is a wrong in react because be communicate with outside of the scope right 
+  // this is a wrong in react because be communicate with outside of the scope right
   // the problem is rendering of components is block
   // the solution react provide HOOKS for handles sideEffect its called a *useEffect*
 
   return (
     <>
       <h1>Saving api response in react component</h1>
-      <button onClick={clickme}>click me to get the data</button>
       {data.map((todo) => (
         <div
           style={{

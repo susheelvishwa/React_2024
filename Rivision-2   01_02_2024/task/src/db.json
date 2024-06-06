@@ -1,0 +1,46 @@
+{
+    "tasks":[
+        {
+            "id":1,
+            "title": "learn html",
+            "isCompletes": false,
+            "assignee":"Prachi",
+            "priority":"low"
+        },
+        {
+            "id":2,
+            "title": "learn CSS",
+            "isCompletes": false,
+            "assignee":"Ankit",
+            "priority":"medium"
+        },
+        {
+            "id":3,
+            "title": "learn Javascript",
+            "isCompletes": true,
+            "assignee":"Susheel",
+            "priority":"high"
+        },
+        {
+            "id":4,
+            "title": "learn React",
+            "isCompletes": true,
+            "assignee":"Shivam",
+            "priority":"high"
+        },
+        {
+            "id":5,
+            "title": "learn Java",
+            "isCompletes": true,
+            "assignee":"Vartika",
+            "priority":"medium"
+        },
+        {
+            "id":6,
+            "title": "learn SQL",
+            "isCompletes": true,
+            "assignee":"Tanu",
+            "priority":"high"
+        }
+    ]
+}

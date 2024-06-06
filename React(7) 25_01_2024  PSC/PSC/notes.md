@@ -11,7 +11,7 @@
     -  Enhance User Experience
     -  reuseable
 
-# how vetual Dom Work
+# how virtual Dom Work
 Complier --> Master Copy --> Working Copy
 and anything changer on master copy --> then change into working copy
 
