@@ -1,11 +1,22 @@
-import React from "react";
+// src/pages/About.jsx
+import { useNavigate } from "react-router-dom";
 
-const about = () => {
+function About() {
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    console.log(`button clicked and user is being navigated to contact page`);
+    navigate(`/contact`);
+  };
+
   return (
-    <div>
-      <h1>About page</h1>
-    </div>
+    <>
+      <h1>About Page</h1>
+      <button onClick={handleClick}>
+        Navigate to contact page using useNavigate hook
+      </button>
+    </>
   );
-};
+}
 
-export default about;
+export default About;
