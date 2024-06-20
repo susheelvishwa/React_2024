@@ -1,12 +1,14 @@
-import './App.css'
+// src/App.jsx
+import AllRoutes from "./components/AllRoutes";
+import Navbar from "./components/Navbar";
 
 function App() {
-
   return (
     <>
-      <h1>hello</h1>
+      <Navbar />
+      <AllRoutes />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
