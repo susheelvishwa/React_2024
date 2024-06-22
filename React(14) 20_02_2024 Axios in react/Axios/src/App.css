@@ -1,0 +1,15 @@
+.card{
+  border: 1px solid black;
+  padding: 10px;
+  margin: 10px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.name{
+  color: red;
+}
+.department{
+  color: rgb(222, 154, 71);
+}
+.company{
+  color: green;
+}

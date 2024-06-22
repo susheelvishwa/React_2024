@@ -1,0 +1,29 @@
+{
+  "employees": [
+    {
+      "name": "Shivam",
+      "department": "Digital Marketing",
+      "company": "Innovative Tech Solutions"
+    },
+    {
+      "name": "Tanu",
+      "department": "Product Management",
+      "company": "Innovative Tech Solutions"
+    },
+    {
+      "name": "Susheel",
+      "department": "Human Resources",
+      "company": "Innovative Tech Solutions"
+    },
+    {
+      "name": "Vartika",
+      "department": "Software Development",
+      "company": "Innovative Tech Solutions"
+    },
+    {
+      "name": "Ankit",
+      "department": "IT Support",
+      "company": "Innovative Tech Solutions"
+    }
+  ]
+}
