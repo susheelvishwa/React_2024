@@ -2,9 +2,10 @@ import "./App.css";
 import axios from "axios";
 import { useState, useEffect } from "react";
 import Post from "./components/Post";
+import PostRequest from "./components/PostRequest";
 
 function App() {
-  const [data, setData] = useState([]); 
+  const [data, setData] = useState([]);
 
   function getData() {
     axios
@@ -23,6 +24,7 @@ function App() {
 
   return (
     <div>
+      <PostRequest getData={getData} />
       {data.length > 0 ? (
         data.map((el) => {
           return <Post key={el.name} {...el} />;

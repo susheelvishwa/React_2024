@@ -7,7 +7,7 @@ const PostRequest = ({ getData }) => {
   const [company, setCompany] = useState("");
 
   const handlePost = async () => {
-    await axios.post("http://localhost:3000/employees",{
+    await axios.put("http://localhost:3000/employees", {
       name,
       department,
       company,
