@@ -1,3 +1,5 @@
+># -------------------- Redux -------------------
+
 ># 1. Why redux come into a Picture and History of Redux, MVC pattern, Flux
 
 ![](./example1/src/assets/image1.png)
