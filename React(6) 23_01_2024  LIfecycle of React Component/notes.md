@@ -1,3 +1,5 @@
+># -------------------- Lifestyle of react components -------------------
+
 # Lifecycle of rect components
 
 - Mount event/Phase : Atteched to the UI (Inital render/ Task1 got mounted to UI)
