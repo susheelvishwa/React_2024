@@ -1,3 +1,5 @@
+># -------------------- Introduction to vite  -------------------
+
 ># Why Use Vite for React ?
 
 1. *Speed* : Vite significantly speeds up the development process. It uses ES Modules, which allows your browser to understand your JavaScript code directly without extensive processing.
