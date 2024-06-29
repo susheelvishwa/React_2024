@@ -1,4 +1,4 @@
-# Introduction to Chakra UI
+># Introduction to Chakra UI
 
 ```
 Chakra UI is a modern, React-based library that offers a range of accessible, reusable, and composable UI components. It's designed to be simple and modular, allowing developers, especially beginners, to build beautiful, responsive websites with ease. Chakra UI stands out for its simplicity and focus on productivity, making it an excellent choice for those new to web development.
@@ -121,12 +121,12 @@ Chakra UI allows you to define responsive styles using an array syntax where eac
   {/* Width and padding will change based on the screen size */}
 </Box>
 
-# Responsive `<Box>` Component
+># Responsive `<Box>` Component
 
 ## Overview
 The `<Box>` component is a generic container component provided by the library. It's similar to a `<div>` but comes with built-in styling capabilities.
 
-## Responsive Properties
+>## Responsive Properties
 
 ### Width
 The `width` property can be defined using a responsive array. It will change based on the screen size:
@@ -154,6 +154,7 @@ The `p` property (short for `padding`) can also be defined using a responsive ar
 > ## Hooks in Chakra UI :
 
 Chakra UI provides a set of custom React hooks that make it easier to manage various UI states and behaviors. Let's discuss two popular hooks: `useDisclosure` and `useToast`.
+```
 
 ### 1. `useDisclosure`
 
@@ -171,11 +172,11 @@ This hook is commonly used for handling open-close actions for modals, drawers, 
 
 - **Usage**:
     - You can customize the appearance, duration, and position of the toast.
-
+```
 
 
 # Use-case & Benefits
-
+```
 - **Accessibility**: Built with accessibility in mind, ensuring your site is user-friendly for everyone.
 - **Responsive Design**: Components are responsive, making your website look great on any device.
 - **Customizability**: Easily customizable to fit your design needs.
