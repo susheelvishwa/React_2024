@@ -1,4 +1,6 @@
 
+># -------------------- Context API -------------------
+
 ># Prop Drilling in React
 
 Prop drilling, often referred to as "prop threading" or "prop tunneling," occurs when data is passed through multiple layers of a component tree in a React application, just to reach a deeply nested component. This practice can lead to several issues, such as:
