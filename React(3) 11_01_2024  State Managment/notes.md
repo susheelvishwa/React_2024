@@ -1,6 +1,8 @@
+># -------------------- STATE MANAGEMENT -------------------
+
 the session is all about
 
-*State Managment*
+*State Management*
 
 <h1>button click --> handleClick --> stateArray[1](newValue) -- newValue becomming the update value of count</h1>
 
