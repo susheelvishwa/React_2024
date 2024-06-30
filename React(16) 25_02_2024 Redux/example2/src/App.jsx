@@ -1,11 +1,15 @@
-import React from 'react'
+import AddTodo from "./components/AddTodo.jsx";
+import TodoList from "./components/TodoList.jsx";
+import "./App.css";
 
-const App = () => {
+function App() {
   return (
-    <div>
-      hello
+    <div className="container">
+      <h1>Todo List</h1>
+      <AddTodo />
+      <TodoList />
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
