@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>React</title>
+  <link rel="stylesheet" href="../Ease of Development using vinila javascript/style.css">
+</head>
+
+<body>
+  <div id="root"></div>
+  <script src="https://www.unpkg.com/react@18.2.0/umd/react.development.js"></script>
+  <script src="https://www.unpkg.com/react-dom@18.2.0/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+  <script type="text/babel">
+    const root = document.getElementById("root");
+    const rootElement = ReactDOM.createRoot(root);
+
+    function App() {
+      return (
+        <div className="App">
+          <h1>Hello World!</h1>
+          <h2>This is my App!</h2>
+        </div>
+      );
+    }
+
+    rootElement.render(<App />);
+  </script>
+</body>
+
+</html>
