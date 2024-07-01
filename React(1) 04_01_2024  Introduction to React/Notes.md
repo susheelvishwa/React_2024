@@ -1,13 +1,12 @@
-># -------------------- INTRODUCTION TO REACT -------------------
+># ------------------------ INTRODUCTION TO REACT -----------------------
 
 # React Basics
 
-
--------------------------------------------------------------------------------------------------------
 # *React Intro* : https://masai-school.notion.site/Pre-Class-Notes-693d8d69424f46a3aa1541804705919c
 # *Declarative vs Imperative Programming* :  https://masai-school.notion.site/Declarative-Vs-Imperative-Programming-dea4322876c4468191112449e6e82f26
 # *JS and DOM Vs React and ReactDOM* : https://masai-school.notion.site/JS-and-DOM-Vs-React-and-ReactDOM-Let-s-talk-syntax-91217756141142ebb0f72a0e44fbef19
 # *JSX-and-Babel*: https://masai-school.notion.site/JSX-and-Babel-e68c71979f424717bd0abfee79e6a027
+# *More about JSX*: https://masai-school.notion.site More-about-JSX-Interpolation-Props-Attributes-Events-and-More-a41e03a8ebd849b2982efba5945ae773
 -------------------------------------------------------------------------------------------------------
 
 *Importance of Persistence:*
@@ -25,7 +24,9 @@ ReactDOM is a package that provides DOM-specific methods that can be used at the
 *Understanding JSX*
 JSX is a syntax extension to JavaScript recommended by React to describe what the UI should look like. JSX may look like a template language, but it comes with the full power of JavaScript. JSX compiles into React eleme
 
+```javascript
 const element = <h1>Hello, world!</h1>;
+```
 
 JSX allows you to write HTML elements in JavaScript and place them in the DOM without any createElement() and appendChild() methods.
 
@@ -34,8 +35,10 @@ JSX allows you to write HTML elements in JavaScript and place them in the DOM wi
 *Element Rendering*
 Elements are the smallest building blocks of React apps. An element describes what you want to see on the screen. Unlike browser DOM elements, React elements are plain objects, and are cheap to create. ReactDOM takes care of updating the DOM to match the React elements.
 
+```javascript
 const element = <h1>Hello, world</h1>;
 ReactDOM.render(element, document.getElementById('root'));
+```
 
 -------------------------------------------------------------------------------------------
 
